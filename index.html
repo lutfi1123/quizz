@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>EduQuiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>EduQuiz</h2>
+    <ul>
+        <li onclick="showPage('home')">Home</li>
+        <li onclick="showPage('quiz')">Quiz</li>
+        <li onclick="showPage('add')">Tambah Soal</li>
+        <li onclick="showPage('score')">Skor</li>
+        <li onclick="showPage('rank')">Peringkat</li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <h1>Selamat Datang di EduQuiz</h1>
+    <p>Belajar sambil bermain kuis edukatif</p>
+    <button onclick="startQuiz()">Mulai Quiz</button>
+</section>
+
+<section id="rank" class="page">
+    <h1>Peringkat</h1>
+    <ol id="rankingList"></ol>
+    <button onclick="showPage('home')">Kembali ke Home</button>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="page">
+    <h2 id="timer">Waktu: 15</h2>
+    <p id="question"></p>
+
+    <div class="options">
+        <button class="option" onclick="checkAnswer(0)"></button>
+        <button class="option" onclick="checkAnswer(1)"></button>
+        <button class="option" onclick="checkAnswer(2)"></button>
+        <button class="option" onclick="checkAnswer(3)"></button>
+    </div>
+
+    <button onclick="nextQuestion()">Soal Berikutnya</button>
+</section>
+
+<!-- TAMBAH SOAL -->
+<section id="add" class="page">
+    <h1>Tambah Pertanyaan</h1>
+
+    <input type="text" id="newQuestion" placeholder="Pertanyaan"><br>
+    <input type="text" id="opt1" placeholder="Opsi A"><br>
+    <input type="text" id="opt2" placeholder="Opsi B"><br>
+    <input type="text" id="opt3" placeholder="Opsi C"><br>
+    <input type="text" id="opt4" placeholder="Opsi D"><br>
+
+    <select id="correct">
+        <option value="0">Jawaban A</option>
+        <option value="1">Jawaban B</option>
+        <option value="2">Jawaban C</option>
+        <option value="3">Jawaban D</option>
+    </select>
+
+    <button onclick="addQuestion()">Simpan Soal</button>
+    <p id="info"></p>
+</section>
+
+<!-- SKOR -->
+<section id="score" class="page">
+    <h1>Skor Akhir</h1>
+    <p id="finalScore">0</p>
+    <button onclick="showPage('home')">Kembali ke Home</button>    
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

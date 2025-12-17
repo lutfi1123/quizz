@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #4facfe;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+/* PAGE */
+.page {
+    display: none;
+    padding: 30px;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #007bff;
+}
+
+/* QUIZ */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.option {
+    background: #00c6ff;
+}
+
+/* FORM */
+input, select {
+    padding: 8px;
+    width: 80%;
+    margin: 5px 0;
+}
+ol {
+    text-align: left;
+    max-width: 300px;
+    margin: auto;
+    font-size: 18px;
+}
